@@ -48,6 +48,7 @@ def run(options):
         config.update('database_user', options.get('database_user'))
         config.update('database_password', options.get('database_password'))
         config.update('database_host', options.get('database_host'))
+        config.update('database_socket', options.get('database_socket'))
         config.update('database_port', options.get('database_port'))
         config.update('database_name', options.get('database_name'))
 

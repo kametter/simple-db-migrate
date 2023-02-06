@@ -250,6 +250,7 @@ class Main(object):
             self._execution_log("_____________________________________________", "YELLOW", log_level_limit=1)
 
     def _execution_log(self, msg, color="CYAN", log_level_limit=2):
+        msg = msg.encode('utf-8')
         if self.config.get("log_level", 1) >= log_level_limit:
             CLI.msg(msg, color)
         self.log.debug(msg)

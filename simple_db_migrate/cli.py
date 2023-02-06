@@ -199,6 +199,13 @@ class CLI(object):
             },
 
             {
+                "opt_str": ("--db-socket",),
+                "dest": "database_socket",
+                "default": None,
+                "help": "Set the socket where the database is."
+            },
+
+            {
                 "opt_str": ("--db-port",),
                 "dest": "database_port",
                 "default": None,
