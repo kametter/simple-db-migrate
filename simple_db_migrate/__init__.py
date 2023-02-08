@@ -25,8 +25,8 @@ def run(options):
             msg = 'simple-db-migrate v%s' % SIMPLE_DB_MIGRATE_VERSION
             CLI.info_and_exit(msg)
 
-        if options.get('show_colors'):
-            CLI.show_colors()
+        if options.get('hide_colors'):
+            CLI.hide_colors()
 
         # Create config
         if options.get('config_file') or os.path.exists('simple-db-migrate.conf'):

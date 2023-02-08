@@ -4,25 +4,25 @@ import sys
 class CLI(object):
 
     color = {
-        "PINK": "",
-        "BLUE": "",
-        "CYAN": "",
-        "GREEN": "",
-        "YELLOW": "",
-        "RED": "",
-        "END": "",
+        "PINK": "\033[35m",
+        "BLUE": "\033[34m",
+        "CYAN": "\033[36m",
+        "GREEN": "\033[32m",
+        "YELLOW": "\033[33m",
+        "RED": "\033[31m",
+        "END": "\033[0m",
     }
 
     @staticmethod
-    def show_colors():
+    def hide_colors():
         CLI.color = {
-            "PINK": "\033[35m",
-            "BLUE": "\033[34m",
-            "CYAN": "\033[36m",
-            "GREEN": "\033[32m",
-            "YELLOW": "\033[33m",
-            "RED": "\033[31m",
-            "END": "\033[0m",
+            "PINK": "",
+            "BLUE": "",
+            "CYAN": "",
+            "GREEN": "",
+            "YELLOW": "",
+            "RED": "",
+            "END": "",
         }
 
     @staticmethod
@@ -103,11 +103,11 @@ class CLI(object):
             },
 
             {
-                "opt_str": ("--color",),
+                "opt_str": ("--colorless",),
                 "action": "store_true",
-                "dest": "show_colors",
+                "dest": "hide_colors",
                 "default": False,
-                "help": "Output with beautiful colors."
+                "help": "Output without colors."
             },
 
             {
